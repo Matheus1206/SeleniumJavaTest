@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class Config {
 
     private WebDriver driver;
+    private final String URL = "olapodcasts";
 
     public WebDriver iniciaDriver(){
         String soNome = System.getProperty("os.name");
@@ -24,9 +25,9 @@ public class Config {
         return driver;
     }
 
-    public WebDriver acessaUrl(String nomeSite){
+    public WebDriver acessaUrl(){
         WebDriver driver = iniciaDriver();
-        driver.get("https://"+nomeSite+".com.br");
+        driver.get("https://"+URL+".com");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         return driver;
