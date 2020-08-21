@@ -25,7 +25,7 @@ public class Config {
         return driver;
     }
 
-    public WebDriver acessaUrl(){
+    public WebDriver acessaUrlDoOla(){
         WebDriver driver = iniciaDriver();
         driver.get("https://"+URL+".com");
         driver.manage().window().maximize();
